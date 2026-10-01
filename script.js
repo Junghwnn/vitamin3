@@ -36,15 +36,13 @@ const question1 = () => {
 const question2 = () => {
   const taskName = document.getElementById("task-name");
   const addTodoButton = document.getElementById("add-todo");
-  const todoListUl = document.getElementById("todo-list");
+  const todoList = document.getElementById("todo-list");
 
   addTodoButton.addEventListener("click", () => {
     if (taskName.value !== "") {
       const newTodo = document.createElement("li");
-
       newTodo.textContent = taskName.value;
-      todoListUl.append(newTodo);
-
+      todoList.append(newTodo);
       taskName.value = "";
     }
   });
